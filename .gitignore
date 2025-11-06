@@ -1,0 +1,82 @@
+# --------------------------------------------------
+# macOS
+# --------------------------------------------------
+.DS_Store
+
+# --------------------------------------------------
+# IDEs / Editors
+# --------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --------------------------------------------------
+# Node / Frontend
+# --------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+dist/
+build/
+**/dist/
+**/build/
+*.map
+
+# --------------------------------------------------
+# Composer / PHP
+# --------------------------------------------------
+vendor/
+composer.phar
+.phpunit.result.cache
+.php_cs.cache
+
+# Note: composer.lock SHOULD be tracked for reproducible builds
+
+# --------------------------------------------------
+# DDEV (local development environment)
+# --------------------------------------------------
+.ddev/
+
+# --------------------------------------------------
+# Drupal
+# --------------------------------------------------
+
+# Core and contributed code managed by Composer
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# User-generated and temporary files
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/tmp/
+/web/sites/*/translations/
+/web/sites/*/php/
+
+/tmp/
+/cache/
+/backups/
+
+# Local settings and service files (often contain secrets)
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+
+# --------------------------------------------------
+# Configuration
+# --------------------------------------------------
+# Configuration sync should be committed
+# (do NOT ignore /config/sync so the starter project includes default config)
+
+# --------------------------------------------------
+# Logs & misc
+# --------------------------------------------------
+.env
+*.log
+*.bak
+*.tmp
+*.swp

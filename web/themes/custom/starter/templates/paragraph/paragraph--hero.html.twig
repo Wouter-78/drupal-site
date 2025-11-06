@@ -1,0 +1,48 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+    {% set title = content.field_title %}
+    {% set text = content.field_text %}
+    {% set image = content.field_image %}
+    {% set cta_button = content.field_cta_button.0 %}
+    {% if cta_button is defined %}
+        {% set button_title = cta_button['#title'] %}
+        {% set button_url = cta_button['#url'].toString() %}
+    {% endif %}
+
+    <section data-aos="fade-in" class="hero">
+        <div class="hero__inner container grid gap-x-8 xl:grid-cols-2">
+            <div class="hero__intro flex items-center">
+                <div class="mb-8">
+                    {% if title %}
+                        <h1 class="hero__title">{{ title }}</h1>
+                    {% endif %}
+                    {% if text %}
+                        <div class="hero__text py-8 text-xl leading-normal lg:text-xl xl:text-2xl">
+                            {{ text }}
+                        </div>
+                    {% endif %}
+                    {% if cta_button %}
+                        {% include '@starter/components/button/cta-button/cta-button.twig' with {
+                            text: button_title,
+                            url: button_url,
+                            color: 'primary'
+                        } %}
+                    {% endif %}
+                </div>
+            </div>
+            {% if image %}
+                <div class="hero__image grid xl:items-center">
+                    <div class="
+                        grid place-items-center
+                        [&_.field\\_\\_item]:rounded-full [&_.field\\_\\_item]:overflow-hidden [&_.field\\_\\_item]:drop-shadow-lg
+                        [&_img]:aspect-square [&_img]:size-full [&_img]:object-cover
+                        ">
+                        {{ image }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

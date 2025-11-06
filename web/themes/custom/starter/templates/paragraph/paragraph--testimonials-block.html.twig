@@ -1,0 +1,22 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+    {% set title = content.field_title %}
+    {% set testimonials = content.field_testimonials %}
+
+    <section data-aos="fade-up" class="testimonials-block">
+        <div class="testimonials-block__inner container">
+            {% if title %}
+                <h2 class="text-block__title text-center">
+                    {{ title }}
+                </h2>
+            {% endif %}
+            {% if testimonials %}
+                <div class="[&_.field--name-field-testimonials]:grid [&_.field--name-field-testimonials]:gap-8 [&_.field--name-field-testimonials]:lg:grid-cols-3 [&_.field--name-field-testimonials]:items-stretch mt-8">
+                    {{ testimonials }}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

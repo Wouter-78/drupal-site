@@ -1,0 +1,37 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+    {% set title = content.field_title %}
+    {% set text = content.field_rich_text %}
+    {% set image = content.field_image %}
+    {% set image_left = content.field_image_position.0['#markup'] == '1' %}
+
+    <section data-aos="fade-up" class="text-image-block rich-text">
+        <div class="text-image-block__inner container">
+            <div class="flex max-xl:flex-col gap-10">
+                <div class="text-image-block__text xl:w-1/2 {{ image_left ? 'order-2' : '' }}">
+                    {% if title %}
+                        <h2 class="text-image-block__title mb-4">
+                            {{ title }}
+                        </h2>
+                    {% endif %}
+                    {% if text %}
+                        <div class="text-image-block__text">
+                            {{ text }}
+                        </div>
+                    {% endif %}
+                </div>
+                {% if image %}
+                    <div class="
+                        xl:w-1/2
+                        [&_.field\\_\\_item]:rounded-2xl [&_.field\\_\\_item]:overflow-hidden [&_.field\\_\\_item]:drop-shadow-lg
+                        [&_img]:size-full [&_img]:object-cover
+                        ">
+                        {{ image }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

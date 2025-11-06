@@ -1,0 +1,15 @@
+{
+  "name": "starter",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/style.css -o ./css/style.css --minify",
+    "watch": "tailwindcss -i ./src/css/style.css -o ./css/style.css --watch"
+  },
+  "devDependencies": {
+    "livereload": "^0.9.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}

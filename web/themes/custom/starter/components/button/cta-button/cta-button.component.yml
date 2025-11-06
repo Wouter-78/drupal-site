@@ -1,0 +1,10 @@
+name: CTA button
+description: 'CTA button component.'
+props:
+  text:
+    type: string
+    required: true
+  color:
+    type: string
+    required: false
+    default: 'primary'

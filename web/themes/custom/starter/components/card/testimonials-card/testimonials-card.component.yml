@@ -1,0 +1,12 @@
+name: Testimonials card
+description: 'Testimonials card component.'
+props:
+  text:
+    type: string
+    required: true
+  person:
+    type: string
+    required: true
+  image:
+    type: render
+    required: false

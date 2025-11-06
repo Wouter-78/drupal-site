@@ -1,0 +1,9 @@
+{% set text = content.field_text %}
+{% set person = content.field_person %}
+{% set image = content.field_image %}
+
+{% include '@starter/components/card/testimonials-card/testimonials-card.twig' with {
+  text: text,
+  person: person,
+  image: image
+} only %}

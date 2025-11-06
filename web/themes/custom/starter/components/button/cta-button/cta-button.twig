@@ -1,0 +1,13 @@
+{% if url %}
+  <a href="{{ url }}" class="button cta-button
+    {% if color == 'primary' %}
+      text-white bg-indigo-600 hover:bg-indigo-700
+    {% elseif color == 'secondary' %}
+      text-indigo-600 bg-white hover:bg-indigo-200
+    {% else %}
+      bg-gray-600 hover:bg-gray-700
+    {% endif %}
+  ">
+    {{ text }}
+  </a>
+{% endif %}

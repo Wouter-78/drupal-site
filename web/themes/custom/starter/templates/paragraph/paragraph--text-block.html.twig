@@ -1,0 +1,22 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+    {% set title = content.field_title %}
+    {% set text = content.field_rich_text %}
+
+    <section data-aos="fade-up" class="text-block rich-text">
+        <div class="text-block__inner container max-w-2xl">
+            {% if title %}
+                <h2 class="text-block__title mb-4">
+                    {{ title }}
+                </h2>
+            {% endif %}
+            {% if text %}
+                <div class="text-block__text">
+                    {{ text }}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

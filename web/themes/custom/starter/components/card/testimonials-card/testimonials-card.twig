@@ -1,0 +1,15 @@
+<div class="testimonials-card flex flex-col justify-between h-full">
+    {% if text %}
+        <div class="taxonomy-term--testimonials__text rich-text max-w-2xl mx-auto mb-4 text-center">
+            {{ text }}
+        </div>
+    {% endif %}
+    <div class="mt-auto">
+      <div class="taxonomy-term--testimonials__image mb-4 size-16 mx-auto rounded-full overflow-hidden drop-shadow-lg [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+          {{ image }}
+      </div>
+      <div class="taxonomy-term--testimonials__person text-center font-semibold text-lg">
+          {{ person }}
+      </div>
+    </div>
+</div>

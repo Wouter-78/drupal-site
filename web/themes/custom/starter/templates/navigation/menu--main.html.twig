@@ -1,0 +1,29 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('main-menu', 'flex max-lg:flex-col', 'gap-4', 'list-none') }}>
+    {% else %}
+      <ul class="submenu space-y-2">
+    {% endif %}
+    {% for item in items %}
+      {% set classes = [
+        'menu-item max-lg:text-indigo-900',
+        '[&>a]:inline-block [&>a]:px-4 [&>a]:py-2 [&>a]:text-lg',
+        'hover:text-indigo-400',
+        item.in_active_trail ? 'text-slate-600 lg:text-indigo-600 font-semibold',
+      ] %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

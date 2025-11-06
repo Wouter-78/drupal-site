@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "./base/elements.css";
+@import "./base/fonts.css";
+
+@theme {
+    --font-figtree: "Figtree", sans-serif;
+    --font-momo-signature: "MomoSignature", sans-serif;
+}
+
+@utility container {
+    @apply
+    max-w-6xl
+    px-8
+    py-16
+    xl:px-0
+    mx-auto;
+}

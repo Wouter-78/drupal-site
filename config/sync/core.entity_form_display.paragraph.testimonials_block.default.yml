@@ -1,0 +1,30 @@
+uuid: fd823f1d-6f2e-491d-bd10-fc436b327877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials_block.field_testimonials
+    - field.field.paragraph.testimonials_block.field_title
+    - paragraphs.paragraphs_type.testimonials_block
+id: paragraph.testimonials_block.default
+targetEntityType: paragraph
+bundle: testimonials_block
+mode: default
+content:
+  field_testimonials:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

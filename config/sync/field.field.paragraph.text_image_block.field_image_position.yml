@@ -1,0 +1,21 @@
+uuid: d013e135-d6d0-4146-9ae2-7296813a5c6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.text_image_block
+id: paragraph.text_image_block.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: text_image_block
+label: 'Position image to left'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

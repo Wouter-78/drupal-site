@@ -1,0 +1,42 @@
+uuid: d24149c9-2cab-4b55-9120-086b4882a2c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials_block.field_testimonials
+    - field.field.paragraph.testimonials_block.field_title
+    - paragraphs.paragraphs_type.testimonials_block
+  module:
+    - fences
+id: paragraph.testimonials_block.default
+targetEntityType: paragraph
+bundle: testimonials_block
+mode: default
+content:
+  field_testimonials:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden: {  }

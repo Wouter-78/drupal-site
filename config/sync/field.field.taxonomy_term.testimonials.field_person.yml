@@ -1,0 +1,19 @@
+uuid: bcad306b-6d75-4765-969d-bdcf9b22328c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_person
+    - taxonomy.vocabulary.testimonials
+id: taxonomy_term.testimonials.field_person
+field_name: field_person
+entity_type: taxonomy_term
+bundle: testimonials
+label: Person
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

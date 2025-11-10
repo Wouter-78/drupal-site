@@ -1,0 +1,20 @@
+uuid: 6fb0394f-b67b-4b11-a6f2-c83ff9411ccb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_testimonials
+field_name: field_testimonials
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

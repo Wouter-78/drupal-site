@@ -1,0 +1,25 @@
+uuid: 55acaaa2-6caf-405f-9cbf-db5840c426a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links
+  module:
+    - system
+  theme:
+    - starter
+id: starter_sociallinks
+theme: starter
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-links'
+settings:
+  id: 'system_menu_block:social-links'
+  label: 'Social links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

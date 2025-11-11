@@ -54,7 +54,7 @@ Feel free to open issues or submit pull requests to improve this starter site.
 - Composer  
 - Node.js & NPM (inside DDEV container)  
 
-### Setup Steps
+### 🧩 Setup Steps
 
 1. **Clone the repository**
    ```bash
@@ -66,16 +66,34 @@ Feel free to open issues or submit pull requests to improve this starter site.
     ddev start
     ddev composer install
 
-3. **Enter the DDEV container**
+3. **Copy and configure your local settings**  
+   If not already present, copy an example file (if available) and adjust database credentials:
+   ```bash
+    cp web/sites/example.settings.local.php web/sites/default/settings.local.php
+    ```
+   
+   Make sure it includes:
+    ```php
+    $settings['config_sync_directory'] = '../config/sync';
+
+4. **Install the site from existing configuration**  
+   This project includes a full config/sync directory. To install the site with all configuration, run:
+   ```bash
+    ddev drush si --existing-config
+    ddev drush cr
+   ```
+   After installation, Drush will output the admin login credentials (user 1).
+
+5. **Enter the DDEV container**
    ```bash
     ddev ssh
 
-4. **Install front-end dependencies**
+6. **Install front-end dependencies**
    ```bash
     cd web/themes/custom/starter
     npm install
 
-5. **Build or watch your CSS**
+7. **Build or watch your CSS**
    ```bash
     # Build production CSS
     npm run build
